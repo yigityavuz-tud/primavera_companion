@@ -1,6 +1,12 @@
+
 #!/usr/bin/env python3
 import os
 import argparse
+import sys
+
+# Add the current directory to sys.path
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+
 from src.data_processing import load_and_explore_data, preprocess_playlist_data, analyze_genres
 from src.modeling import train_and_evaluate_models, predict_and_rank_artists, analyze_artist_overlap
 from src.visualization import plot_artist_distribution, plot_feature_importance

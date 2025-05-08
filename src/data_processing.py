@@ -6,7 +6,7 @@ import numpy as np
 def load_and_explore_data(my_playlist_path=None, primavera_playlist_path=None):
     """Load the data files and perform initial exploration"""
     # Check if data exists in expected location
-    data_dir = "./data"
+    data_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data")
     if not os.path.exists(data_dir):
         print(f"Warning: {data_dir} directory not found. Using current directory.")
         data_dir = "."
