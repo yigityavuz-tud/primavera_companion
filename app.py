@@ -30,6 +30,7 @@ logger = logging.getLogger(__name__)
 UPLOAD_FOLDER = os.path.join(os.getcwd(), 'uploads')
 RESULT_FOLDER = os.path.join(os.getcwd(), 'results')
 ALLOWED_EXTENSIONS = {'csv'}
+MAX_ARTISTS = 1500  # Limit the number of top artists to process
 
 # Create folders if they don't exist
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)

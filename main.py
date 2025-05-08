@@ -18,8 +18,6 @@ def main():
                       help='Minimum number of tracks an artist must have to be included (for Primavera data)')
     args = parser.parse_args()
 
-    print("===== Primavera Sound Artist Recommendation System =====")
-
     # Step 1: Load and explore data
     my_playlist, primavera_playlist = load_and_explore_data(
         my_playlist_path=args.my_playlist,
