@@ -27,7 +27,7 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['RESULT_FOLDER'] = RESULT_FOLDER
 
 # Check if primavera.csv exists in data folder
-PRIMAVERA_CSV = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'data', 'primavera.csv')
+PRIMAVERA_CSV = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'data', 'primavera_25.csv')
 if not os.path.exists(PRIMAVERA_CSV):
     print(f"Warning: Primavera CSV file not found at {PRIMAVERA_CSV}. Please place it there.")
     
