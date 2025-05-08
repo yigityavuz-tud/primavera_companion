@@ -2,18 +2,15 @@
 
 A personalized recommendation system for Primavera Sound festival attendees.
 
-![Primavera Companion](static/images/screenshot.png)
-
 ## 🎵 About
 
-Primavera Companion is a machine learning-powered web application that helps music fans discover which artists they should see at the Primavera Sound music festival, based on their personal music taste. The app analyzes a user's Spotify playlist data and recommends festival artists who match their preferences.
+Primavera Companion is a machine learning-powered tool that helps music fans discover which artists they should see at the Primavera Sound music festival, based on their personal music taste. The app analyzes a user's Spotify playlist data and recommends festival artists who match their preferences.
 
 ## ✨ Features
 
 - **AI-Powered Recommendations**: Uses machine learning to analyze musical features, genres, and artist connections
-- **User-Friendly Web Interface**: Upload your playlist and get instant recommendations
-- **Visual Results**: See your top recommended artists with beautiful data visualizations
-- **Downloadable Results**: Save your personalized festival schedule as an HTML file
+- **Simple Web Interface**: Upload your playlist and get a downloadable CSV of recommendations
+- **CSV Output**: Get a ranked list of recommended Primavera artists that matches your music taste
 - **Data Privacy**: Your playlist data is only used for processing and not stored permanently
 
 ## 🚀 Quick Start
@@ -22,7 +19,7 @@ Primavera Companion is a machine learning-powered web application that helps mus
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/primavera-companion.git
+   git clone https://github.com/yourusername/primavera-companion.git -b webapp
    cd primavera-companion
    ```
 
@@ -41,7 +38,7 @@ Primavera Companion is a machine learning-powered web application that helps mus
    data/primavera.csv
    ```
 
-5. Run the application:
+5. Run the web application:
    ```bash
    python app.py
    ```
@@ -53,7 +50,7 @@ Primavera Companion is a machine learning-powered web application that helps mus
 You can also use the command-line interface:
 
 ```bash
-python main.py --my-playlist "path/to/your/playlist.csv" --primavera-playlist "data/primavera.csv"
+python main.py --my-playlist "path/to/your/playlist.csv" --primavera-playlist "data/primavera.csv" --output "recommendations.csv"
 ```
 
 ## 🧠 How It Works
@@ -63,7 +60,7 @@ python main.py --my-playlist "path/to/your/playlist.csv" --primavera-playlist "d
 3. **Feature Engineering**: Identifies shared genres and creates numerical features
 4. **Model Training**: Trains multiple regression models to predict artist affinity
 5. **Artist Ranking**: Ranks Primavera artists based on predicted scores
-6. **Results Visualization**: Presents the recommendations visually
+6. **CSV Output**: Provides the recommendations as a downloadable CSV file
 
 ## 🛠️ Technical Details
 
@@ -72,8 +69,6 @@ python main.py --my-playlist "path/to/your/playlist.csv" --primavera-playlist "d
 - **Data Processing**: Pandas, NumPy
 - **Machine Learning**: scikit-learn
 - **Web Framework**: Flask
-- **Frontend**: HTML, CSS, JavaScript
-- **Visualization**: Matplotlib
 
 ### Project Structure
 
@@ -85,45 +80,18 @@ primavera-companion/
 ├── src/                    # Source code
 │   ├── data_processing.py  # Data preprocessing functions
 │   ├── modeling.py         # ML model training and evaluation
-│   ├── visualization.py    # Data visualization functions
 │   └── utils.py            # Utility functions
-├── static/                 # Static web assets
-│   └── css/
-│       └── style.css       # Custom styles
 ├── templates/              # HTML templates
-│   ├── index.html          # Homepage
-│   ├── results.html        # Results page
-│   └── about.html          # About page
+│   └── index.html          # Homepage
 ├── data/                   # Data directory
 │   └── .gitkeep            # (add primavera.csv here)
 ├── uploads/                # User uploads (temporary)
 └── results/                # Generated results
 ```
 
-## 🎭 Deploying to Production
-
-### Deploying to Render
-
-1. Create a new Web Service on [Render](https://render.com)
-2. Connect your GitHub repository
-3. Set the build command:
-   ```
-   pip install -r requirements.txt
-   ```
-4. Set the start command:
-   ```
-   gunicorn app:app
-   ```
-5. Add environment variables:
-   ```
-   SECRET_KEY=your_secret_key_here
-   ```
-6. Deploy!
-
 ## 🔧 Customization
 
 - Adjust model parameters in `src/modeling.py`
-- Modify the UI in `templates/` and `static/css/style.css`
 - Update the Primavera lineup data annually in `data/primavera.csv`
 
 ## 📄 License
