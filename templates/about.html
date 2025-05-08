@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Primavera Companion</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Primavera Companion</h1>
+            <p class="subtitle">About the project</p>
+        </div>
+    </header>
+
+    <main class="container about-container">
+        <section class="about-section">
+            <h2>About Primavera Companion</h2>
+            <p>Primavera Companion is a machine learning project that helps music fans make the most of their Primavera Sound festival experience by generating personalized artist recommendations based on their music taste.</p>
+            
+            <h3>The Problem</h3>
+            <p>Music festivals like Primavera Sound feature hundreds of artists across multiple days and stages. It's impossible to see everyone, and sometimes the most enjoyable performances come from artists you didn't know before. How do you decide which artists to prioritize?</p>
+            
+            <h3>The Solution</h3>
+            <p>Primavera Companion analyzes your personal music preferences through your Spotify playlist data and compares them to the artists performing at Primavera Sound. Using machine learning algorithms, it identifies which festival artists best match your taste, even if you've never heard them before.</p>
+        </section>
+
+        <section class="tech-section">
+            <h2>Technology Behind It</h2>
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <h3>Data Processing</h3>
+                    <p>Pandas and NumPy for data manipulation and preparation</p>
+                </div>
+                <div class="tech-card">
+                    <h3>Machine Learning</h3>
+                    <p>Scikit-learn for regression models that predict your affinity for artists</p>
+                </div>
+                <div class="tech-card">
+                    <h3>Web Application</h3>
+                    <p>Flask for the web framework, with HTML, CSS, and JavaScript for the frontend</p>
+                </div>
+                <div class="tech-card">
+                    <h3>Visualization</h3>
+                    <p>Matplotlib for creating visual representations of recommendations</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="how-it-works-detail">
+            <h2>How It Works - The Technical Details</h2>
+            <ol class="process-list">
+                <li>
+                    <h3>Data Collection</h3>
+                    <p>You export your Spotify playlist data using Exportify, which includes audio features like tempo, energy, danceability, and genre information.</p>
+                </li>
+                <li>
+                    <h3>Data Processing</h3>
+                    <p>The system processes both your playlist and the Primavera Sound lineup, handling artist collaborations and aggregating features at the artist level.</p>
+                </li>
+                <li>
+                    <h3>Feature Engineering</h3>
+                    <p>We identify shared genres between your taste and festival artists, and create numerical features representing musical characteristics.</p>
+                </li>
+                <li>
+                    <h3>Model Training</h3>
+                    <p>The system trains multiple regression models (Ridge, Lasso, Random Forest, Gradient Boosting, and SVR) to predict which Primavera artists you would add to your playlist.</p>
+                </li>
+                <li>
+                    <h3>Artist Ranking</h3>
+                    <p>Using the best-performing model, the system ranks all Primavera artists based on their predicted affinity score, with a small boost for artists already in your playlist.</p>
+                </li>
+                <li>
+                    <h3>Visualization & Results</h3>
+                    <p>The results are presented as an interactive list and data visualization, which you can download for offline use.</p>
+                </li>
+            </ol>
+        </section>
+
+        <section class="about-author">
+            <h2>About the Author</h2>
+            <p>Primavera Companion was created as a portfolio project to demonstrate skills in data science, machine learning, and web development, with a focus on solving a real-world problem for music enthusiasts.</p>
+            <p>Find more of my projects on <a href="https://github.com/yourusername" target="_blank">GitHub</a> and connect with me on <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>.</p>
+            <a href="{{ url_for('index') }}" class="button">Back to Home</a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Primavera Companion</p>
+            <nav>
+                <a href="{{ url_for('about') }}">About</a>
+                <a href="https://github.com/yourusername/primavera-companion" target="_blank">GitHub</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>

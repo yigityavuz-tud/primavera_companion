@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Primavera Recommendations</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Primavera Companion</h1>
+            <p class="subtitle">Your personalized artist recommendations</p>
+        </div>
+    </header>
+
+    <main class="container results-container">
+        <section class="results-header">
+            <h2>Your Primavera Sound Recommendations</h2>
+            <p>Based on your music taste, here are the artists you should check out at Primavera Sound!</p>
+            <a href="{{ url_for('download') }}" class="button download-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                Download Results
+            </a>
+            <a href="{{ url_for('index') }}" class="button secondary-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                Try Another Playlist
+            </a>
+        </section>
+
+        <section class="chart-section">
+            <h3>Top Artists Visualization</h3>
+            <div class="chart-container">
+                <img src="{{ chart_data }}" alt="Artist Recommendations Chart" class="results-chart">
+            </div>
+        </section>
+
+        <section class="artist-list-section">
+            <h3>Top 50 Recommended Artists</h3>
+            <div class="artist-grid">
+                {% for artist in artists %}
+                <div class="artist-card {% if artist.In_My_Playlist == 1 %}in-playlist{% endif %}">
+                    <div class="rank">{{ loop.index }}</div>
+                    <div class="artist-details">
+                        <h4>{{ artist.Artist }}</h4>
+                        <div class="score">
+                            Match Score: {{ '%.2f'|format(artist.Adjusted_Score if 'Adjusted_Score' in artist else artist.Predicted_Score) }}
+                        </div>
+                        {% if artist.In_My_Playlist == 1 %}
+                        <div class="playlist-badge">In Your Playlist</div>
+                        {% endif %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+
+        <section class="explanation-section">
+            <h3>How We Made These Recommendations</h3>
+            <p>Our AI model analyzed your playlist and compared it to Primavera Sound artists using:
+            <ul>
+                <li>Musical features (tempo, energy, danceability, etc.)</li>
+                <li>Genre similarities</li>
+                <li>Artist connections</li>
+            </ul>
+            </p>
+            <p>Artists that are already in your playlist are highlighted and given a small boost in the rankings.</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Primavera Companion</p>
+            <nav>
+                <a href="{{ url_for('about') }}">About</a>
+                <a href="https://github.com/yourusername/primavera-companion" target="_blank">GitHub</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>
