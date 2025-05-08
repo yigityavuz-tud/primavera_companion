@@ -2,7 +2,6 @@ import os
 import pandas as pd
 import numpy as np
 
-
 def load_and_explore_data(my_playlist_path=None, primavera_playlist_path=None):
     """Load the data files and perform initial exploration"""
     # Check if data exists in expected location

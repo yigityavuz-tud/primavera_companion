@@ -16,6 +16,7 @@ Primavera Companion is a machine learning-powered web application that helps mus
 - **Downloadable Results**: Save your personalized festival schedule as an HTML file
 - **Data Privacy**: Your playlist data is only used for processing and not stored permanently
 
+
 ## 🚀 Quick Start
 
 ### Running Locally
