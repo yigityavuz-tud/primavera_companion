@@ -2,14 +2,11 @@ from flask import Flask, render_template, request, redirect, url_for, flash, sen
 import os
 import uuid
 import pandas as pd
-import json
 from werkzeug.utils import secure_filename
 from dotenv import load_dotenv
 
 from src.data_processing import load_and_explore_data, preprocess_playlist_data, analyze_genres
 from src.modeling import train_and_evaluate_models, predict_and_rank_artists, analyze_artist_overlap
-from src.visualization import get_graph_as_base64
-from src.utils import create_html_result
 
 # Load environment variables
 load_dotenv()
@@ -30,7 +27,7 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['RESULT_FOLDER'] = RESULT_FOLDER
 
 # Check if primavera.csv exists in data folder
-PRIMAVERA_CSV = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'data', 'primavera_25.csv')
+PRIMAVERA_CSV = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'data', 'primavera.csv')
 if not os.path.exists(PRIMAVERA_CSV):
     print(f"Warning: Primavera CSV file not found at {PRIMAVERA_CSV}. Please place it there.")
     
@@ -138,70 +135,38 @@ def process():
             ranked_artists, my_playlist, primavera_playlist
         )
         
-        # Generate chart
-        chart_data = get_graph_as_base64(ranked_artists, top_n=30)
+        # Save results to CSV for download
+        csv_path = os.path.join(result_folder, 'primavera_recommendations.csv')
+        ranked_artists.to_csv(csv_path, index=False)
         
-        # Save results to JSON for the results page
-        json_result_path = os.path.join(result_folder, 'ranked_artists.json')
-        with open(json_result_path, 'w') as f:
-            json.dump({
-                'artists': ranked_artists.to_dict(orient="records"),
-                'timestamp': pd.Timestamp.now().isoformat()
-            }, f, indent=2)
+        # Store results path in session
+        session['results_csv_path'] = csv_path
         
-        # Create HTML report
-        html_path = create_html_result(ranked_artists, output_path=os.path.join(result_folder, "recommendations.html"))
-        
-        # Store chart data and results path in session
-        session['chart_data'] = chart_data
-        session['json_result_path'] = json_result_path
-        session['html_result_path'] = html_path
-        
-        return redirect(url_for('results'))
+        return redirect(url_for('download'))
     
     except Exception as e:
         flash(f'Error processing your playlist: {str(e)}', 'error')
         return redirect(url_for('index'))
 
 
-@app.route('/results')
-def results():
-    # Check if we have the necessary data in the session
-    if 'chart_data' not in session or 'json_result_path' not in session:
-        flash('Processing results not found. Please upload your file again.', 'error')
-        return redirect(url_for('index'))
-    
-    chart_data = session['chart_data']
-    json_result_path = session['json_result_path']
-    
-    # Load the results from JSON
-    with open(json_result_path, 'r') as f:
-        data = json.load(f)
-    
-    # Get top 50 artists
-    top_artists = data['artists'][:50]
-    
-    return render_template(
-        'results.html', 
-        chart_data=chart_data, 
-        artists=top_artists, 
-        timestamp=data['timestamp']
-    )
-
-
 @app.route('/download')
 def download():
-    if 'html_result_path' not in session:
+    if 'results_csv_path' not in session:
         flash('Download not available. Please process your file again.', 'error')
         return redirect(url_for('index'))
     
-    html_result_path = session['html_result_path']
-    return send_file(html_result_path, as_attachment=True, download_name='primavera_recommendations.html')
-
-
-@app.route('/about')
-def about():
-    return render_template('about.html')
+    results_csv_path = session['results_csv_path']
+    
+    if not os.path.exists(results_csv_path):
+        flash('Results file not found. Please process your file again.', 'error')
+        return redirect(url_for('index'))
+    
+    return send_file(
+        results_csv_path, 
+        as_attachment=True, 
+        download_name='primavera_recommendations.csv',
+        mimetype='text/csv'
+    )
 
 
 if __name__ == '__main__':
