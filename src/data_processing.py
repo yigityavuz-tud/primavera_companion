@@ -213,11 +213,30 @@ def preprocess_playlist_data(playlist_df, is_training=True, shared_genres=None, 
         print("WARNING: No shared_genres provided for test data. Using empty set.")
         genres_to_use = set()
     
-    # Create dummy variables for genres (one-hot encoding)
-    for genre in genres_to_use:
-        exploded_artists[f'Genre_{genre}'] = exploded_artists['Genre_List'].apply(
-            lambda x: 1 if genre in x else 0
-        )
+    # PERFORMANCE IMPROVEMENT: Create all genre columns at once using list comprehension and concat
+    print("Creating genre feature columns efficiently...")
+    
+    # Create a dictionary for genre encoding
+    genre_dfs = []
+    
+    # Convert list of genres to use to a set for faster lookups
+    genres_to_use_set = set(genres_to_use)
+    
+    # For each genre in the set, create a Series that will be a column
+    for genre in genres_to_use_set:
+        genre_col = exploded_artists['Genre_List'].apply(lambda x: 1 if genre in x else 0)
+        genre_col.name = f'Genre_{genre}'
+        genre_dfs.append(genre_col)
+    
+    # If we have genre columns, concat them all at once to the main DataFrame
+    if genre_dfs:
+        # Make a copy to defragment the DataFrame
+        # This is faster than repeatedly adding columns to the original DataFrame
+        exploded_artists = exploded_artists.copy()
+        
+        # Concatenate all genre columns at once
+        genre_df = pd.concat(genre_dfs, axis=1)
+        exploded_artists = pd.concat([exploded_artists, genre_df], axis=1)
     
     # Drop the temporary Genre_List column
     exploded_artists.drop('Genre_List', axis=1, inplace=True)
