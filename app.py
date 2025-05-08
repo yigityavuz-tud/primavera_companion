@@ -33,7 +33,7 @@ app.config['RESULT_FOLDER'] = RESULT_FOLDER
 PRIMAVERA_CSV = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'data', 'primavera.csv')
 if not os.path.exists(PRIMAVERA_CSV):
     print(f"Warning: Primavera CSV file not found at {PRIMAVERA_CSV}. Please place it there.")
-
+    
 
 def allowed_file(filename):
     return '.' in filename and \
