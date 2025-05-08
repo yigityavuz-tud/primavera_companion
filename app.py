@@ -476,7 +476,6 @@ def download_file():
         mimetype='text/csv'
     )
 
-# Add this to your app.py
 
 @app.errorhandler(500)
 def internal_server_error(e):
