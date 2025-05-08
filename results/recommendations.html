@@ -1,0 +1,395 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Primavera Sound Recommendations</title>
+        <style>
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                line-height: 1.6;
+                color: #333;
+                max-width: 800px;
+                margin: 0 auto;
+                padding: 20px;
+                background-color: #f9f9f9;
+            }
+            h1, h2 {
+                color: #e63946;
+            }
+            .header {
+                text-align: center;
+                margin-bottom: 30px;
+                border-bottom: 2px solid #e63946;
+                padding-bottom: 10px;
+            }
+            .artist-container {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                gap: 15px;
+                margin-top: 20px;
+            }
+            .artist-card {
+                background: white;
+                border-radius: 8px;
+                padding: 15px;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                transition: transform 0.3s ease;
+            }
+            .artist-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            }
+            .rank {
+                font-size: 1.5em;
+                font-weight: bold;
+                color: #e63946;
+                margin-right: 10px;
+            }
+            .artist-name {
+                font-weight: bold;
+                font-size: 1.2em;
+                margin-bottom: 5px;
+            }
+            .score {
+                color: #777;
+                font-size: 0.9em;
+            }
+            .in-playlist {
+                background-color: #f8f9fa;
+                border-left: 4px solid #e63946;
+            }
+            .footer {
+                margin-top: 40px;
+                text-align: center;
+                font-size: 0.8em;
+                color: #777;
+            }
+            @media (max-width: 600px) {
+                .artist-container {
+                    grid-template-columns: 1fr;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Primavera Sound Festival</h1>
+            <h2>Your Personalized Artist Recommendations</h2>
+            <p>Based on your music taste</p>
+        </div>
+        
+        <p>Here are the top artists at Primavera Sound that match your music taste:</p>
+        
+        <div class="artist-container">
+    
+            <div class="artist-card in-playlist">
+                <div class="artist-name"><span class="rank">1</span>Caribou</div>
+                <div class="score">Match score: 24.07</div>
+                <div class="in-your-playlist">✓ In your playlist</div>
+            </div>
+        
+            <div class="artist-card in-playlist">
+                <div class="artist-name"><span class="rank">2</span>Chat Pile</div>
+                <div class="score">Match score: 21.64</div>
+                <div class="in-your-playlist">✓ In your playlist</div>
+            </div>
+        
+            <div class="artist-card in-playlist">
+                <div class="artist-name"><span class="rank">3</span>Charli xcx</div>
+                <div class="score">Match score: 20.57</div>
+                <div class="in-your-playlist">✓ In your playlist</div>
+            </div>
+        
+            <div class="artist-card">
+                <div class="artist-name"><span class="rank">4</span>LCD Soundsystem</div>
+                <div class="score">Match score: 20.32</div>
+                
+            </div>
+        
+            <div class="artist-card">
+                <div class="artist-name"><span class="rank">5</span>BIG SPECIAL</div>
+                <div class="score">Match score: 17.17</div>
+                
+            </div>
+        
+            <div class="artist-card">
+                <div class="artist-name"><span class="rank">6</span>FKA twigs</div>
+                <div class="score">Match score: 16.31</div>
+                
+            </div>
+        
+            <div class="artist-card in-playlist">
+                <div class="artist-name"><span class="rank">7</span>Clairo</div>
+                <div class="score">Match score: 15.77</div>
+                <div class="in-your-playlist">✓ In your playlist</div>
+            </div>
+        
+            <div class="artist-card">
+                <div class="artist-name"><span class="rank">8</span>The Mars Volta</div>
+                <div class="score">Match score: 15.54</div>
+                
+            </div>
+        
+            <div class="artist-card">
+                <div class="artist-name"><span class="rank">9</span>Jane Remover</div>
+                <div class="score">Match score: 15.28</div>
+                
+            </div>
+        
+            <div class="artist-card">
+                <div class="artist-name"><span class="rank">10</span>The Jesus Lizard</div>
+                <div class="score">Match score: 15.18</div>
+                
+            </div>
+        
+            <div class="artist-card in-playlist">
+                <div class="artist-name"><span class="rank">11</span>Chappell Roan</div>
+                <div class="score">Match score: 15.10</div>
+                <div class="in-your-playlist">✓ In your playlist</div>
+            </div>
+        
+            <div class="artist-card in-playlist">
+                <div class="artist-name"><span class="rank">12</span>Nilüfer Yanya</div>
+                <div class="score">Match score: 14.88</div>
+                <div class="in-your-playlist">✓ In your playlist</div>
+            </div>
+        
+            <div class="artist-card in-playlist">
+                <div class="artist-name"><span class="rank">13</span>IDLES</div>
+                <div class="score">Match score: 14.70</div>
+                <div class="in-your-playlist">✓ In your playlist</div>
+            </div>
+        
+            <div class="artist-card in-playlist">
+                <div class="artist-name"><span class="rank">14</span>Allie X</div>
+                <div class="score">Match score: 14.04</div>
+                <div class="in-your-playlist">✓ In your playlist</div>
+            </div>
+        
+            <div class="artist-card in-playlist">
+                <div class="artist-name"><span class="rank">15</span>Denzel Curry</div>
+                <div class="score">Match score: 13.75</div>
+                <div class="in-your-playlist">✓ In your playlist</div>
+            </div>
+        
+            <div class="artist-card in-playlist">
+                <div class="artist-name"><span class="rank">16</span>Beach House</div>
+                <div class="score">Match score: 13.59</div>
+                <div class="in-your-playlist">✓ In your playlist</div>
+            </div>
+        
+            <div class="artist-card in-playlist">
+                <div class="artist-name"><span class="rank">17</span>Parcels</div>
+                <div class="score">Match score: 12.87</div>
+                <div class="in-your-playlist">✓ In your playlist</div>
+            </div>
+        
+            <div class="artist-card">
+                <div class="artist-name"><span class="rank">18</span>Floating Points</div>
+                <div class="score">Match score: 11.80</div>
+                
+            </div>
+        
+            <div class="artist-card">
+                <div class="artist-name"><span class="rank">19</span>TV On The Radio</div>
+                <div class="score">Match score: 10.70</div>
+                
+            </div>
+        
+            <div class="artist-card">
+                <div class="artist-name"><span class="rank">20</span>Sturgill Simpson</div>
+                <div class="score">Match score: 10.23</div>
+                
+            </div>
+        
+            <div class="artist-card">
+                <div class="artist-name"><span class="rank">21</span>damoridemort</div>
+                <div class="score">Match score: 10.09</div>
+                
+            </div>
+        
+            <div class="artist-card">
+                <div class="artist-name"><span class="rank">22</span>beabadoobee</div>
+                <div class="score">Match score: 9.56</div>
+                
+            </div>
+        
+            <div class="artist-card">
+                <div class="artist-name"><span class="rank">23</span>Youth Lagoon</div>
+                <div class="score">Match score: 9.12</div>
+                
+            </div>
+        
+            <div class="artist-card">
+                <div class="artist-name"><span class="rank">24</span>Fontaines D.C.</div>
+                <div class="score">Match score: 8.90</div>
+                
+            </div>
+        
+            <div class="artist-card">
+                <div class="artist-name"><span class="rank">25</span>Turnstile</div>
+                <div class="score">Match score: 8.10</div>
+                
+            </div>
+        
+            <div class="artist-card">
+                <div class="artist-name"><span class="rank">26</span>HAIM</div>
+                <div class="score">Match score: 7.65</div>
+                
+            </div>
+        
+            <div class="artist-card">
+                <div class="artist-name"><span class="rank">27</span>Nadah El Shazly</div>
+                <div class="score">Match score: 7.24</div>
+                
+            </div>
+        
+            <div class="artist-card">
+                <div class="artist-name"><span class="rank">28</span>Tristwch Y Fenywod</div>
+                <div class="score">Match score: 7.22</div>
+                
+            </div>
+        
+            <div class="artist-card">
+                <div class="artist-name"><span class="rank">29</span>George Thorogood & The Destroyers</div>
+                <div class="score">Match score: 7.13</div>
+                
+            </div>
+        
+            <div class="artist-card">
+                <div class="artist-name"><span class="rank">30</span>Amelie Lens</div>
+                <div class="score">Match score: 6.92</div>
+                
+            </div>
+        
+            <div class="artist-card">
+                <div class="artist-name"><span class="rank">31</span>Jawnino</div>
+                <div class="score">Match score: 6.92</div>
+                
+            </div>
+        
+            <div class="artist-card">
+                <div class="artist-name"><span class="rank">32</span>Spiritualized</div>
+                <div class="score">Match score: 6.81</div>
+                
+            </div>
+        
+            <div class="artist-card">
+                <div class="artist-name"><span class="rank">33</span>Kim Deal</div>
+                <div class="score">Match score: 6.72</div>
+                
+            </div>
+        
+            <div class="artist-card">
+                <div class="artist-name"><span class="rank">34</span>Pipiolas</div>
+                <div class="score">Match score: 6.62</div>
+                
+            </div>
+        
+            <div class="artist-card">
+                <div class="artist-name"><span class="rank">35</span>Real Farmer</div>
+                <div class="score">Match score: 6.55</div>
+                
+            </div>
+        
+            <div class="artist-card">
+                <div class="artist-name"><span class="rank">36</span>Mohama Saz</div>
+                <div class="score">Match score: 6.39</div>
+                
+            </div>
+        
+            <div class="artist-card">
+                <div class="artist-name"><span class="rank">37</span>Lambrini Girls</div>
+                <div class="score">Match score: 6.27</div>
+                
+            </div>
+        
+            <div class="artist-card">
+                <div class="artist-name"><span class="rank">38</span>salem ilese</div>
+                <div class="score">Match score: 6.24</div>
+                
+            </div>
+        
+            <div class="artist-card">
+                <div class="artist-name"><span class="rank">39</span>MJ Lenderman</div>
+                <div class="score">Match score: 6.17</div>
+                
+            </div>
+        
+            <div class="artist-card">
+                <div class="artist-name"><span class="rank">40</span>Stereolab</div>
+                <div class="score">Match score: 6.08</div>
+                
+            </div>
+        
+            <div class="artist-card">
+                <div class="artist-name"><span class="rank">41</span>Wet Leg</div>
+                <div class="score">Match score: 6.01</div>
+                
+            </div>
+        
+            <div class="artist-card">
+                <div class="artist-name"><span class="rank">42</span>Magdalena Bay</div>
+                <div class="score">Match score: 6.01</div>
+                
+            </div>
+        
+            <div class="artist-card">
+                <div class="artist-name"><span class="rank">43</span>Nathan Shepherd</div>
+                <div class="score">Match score: 5.86</div>
+                
+            </div>
+        
+            <div class="artist-card">
+                <div class="artist-name"><span class="rank">44</span>Brutalismus 3000</div>
+                <div class="score">Match score: 5.85</div>
+                
+            </div>
+        
+            <div class="artist-card">
+                <div class="artist-name"><span class="rank">45</span>Aminé</div>
+                <div class="score">Match score: 5.78</div>
+                
+            </div>
+        
+            <div class="artist-card">
+                <div class="artist-name"><span class="rank">46</span>feeble little horse</div>
+                <div class="score">Match score: 5.66</div>
+                
+            </div>
+        
+            <div class="artist-card">
+                <div class="artist-name"><span class="rank">47</span>Warmduscher</div>
+                <div class="score">Match score: 5.61</div>
+                
+            </div>
+        
+            <div class="artist-card">
+                <div class="artist-name"><span class="rank">48</span>Armand Van Helden</div>
+                <div class="score">Match score: 5.60</div>
+                
+            </div>
+        
+            <div class="artist-card">
+                <div class="artist-name"><span class="rank">49</span>Horsegirl</div>
+                <div class="score">Match score: 5.54</div>
+                
+            </div>
+        
+            <div class="artist-card">
+                <div class="artist-name"><span class="rank">50</span>Dehd</div>
+                <div class="score">Match score: 5.52</div>
+                
+            </div>
+        
+        </div>
+        
+        <div class="footer">
+            <p>Generated by Primavera Companion - Your Festival AI Assistant</p>
+            <p>Created with ❤️ for music lovers</p>
+        </div>
+    </body>
+    </html>
+    

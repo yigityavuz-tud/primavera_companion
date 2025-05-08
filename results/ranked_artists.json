@@ -1,0 +1,637 @@
+{
+  "artists": [
+    {
+      "Rank": 5,
+      "Artist": "Caribou",
+      "Predicted_Score": 21.944624803714078,
+      "In_My_Playlist": 1,
+      "Adjusted_Score": 24.070795632285492,
+      "Adjusted_Rank": 1
+    },
+    {
+      "Rank": 8,
+      "Artist": "Chat Pile",
+      "Predicted_Score": 18.46863979086504,
+      "In_My_Playlist": 1,
+      "Adjusted_Score": 21.637606123291164,
+      "Adjusted_Rank": 2
+    },
+    {
+      "Rank": 9,
+      "Artist": "Charli xcx",
+      "Predicted_Score": 16.946427539529846,
+      "In_My_Playlist": 1,
+      "Adjusted_Score": 20.57205754735653,
+      "Adjusted_Rank": 3
+    },
+    {
+      "Rank": 1,
+      "Artist": "LCD Soundsystem",
+      "Predicted_Score": 29.03186089895213,
+      "In_My_Playlist": 0,
+      "Adjusted_Score": 20.32230262926649,
+      "Adjusted_Rank": 4
+    },
+    {
+      "Rank": 2,
+      "Artist": "BIG SPECIAL",
+      "Predicted_Score": 24.533801170330975,
+      "In_My_Playlist": 0,
+      "Adjusted_Score": 17.17366081923168,
+      "Adjusted_Rank": 5
+    },
+    {
+      "Rank": 3,
+      "Artist": "FKA twigs",
+      "Predicted_Score": 23.29989041973727,
+      "In_My_Playlist": 0,
+      "Adjusted_Score": 16.309923293816087,
+      "Adjusted_Rank": 6
+    },
+    {
+      "Rank": 22,
+      "Artist": "Clairo",
+      "Predicted_Score": 10.08417824567258,
+      "In_My_Playlist": 1,
+      "Adjusted_Score": 15.768483041656445,
+      "Adjusted_Rank": 7
+    },
+    {
+      "Rank": 4,
+      "Artist": "The Mars Volta",
+      "Predicted_Score": 22.205053236947958,
+      "In_My_Playlist": 0,
+      "Adjusted_Score": 15.54353726586357,
+      "Adjusted_Rank": 8
+    },
+    {
+      "Rank": 6,
+      "Artist": "Jane Remover",
+      "Predicted_Score": 21.83001140756195,
+      "In_My_Playlist": 0,
+      "Adjusted_Score": 15.281007985293364,
+      "Adjusted_Rank": 9
+    },
+    {
+      "Rank": 7,
+      "Artist": "The Jesus Lizard",
+      "Predicted_Score": 21.685935569120392,
+      "In_My_Playlist": 0,
+      "Adjusted_Score": 15.180154898384274,
+      "Adjusted_Rank": 10
+    },
+    {
+      "Rank": 29,
+      "Artist": "Chappell Roan",
+      "Predicted_Score": 9.128659910172843,
+      "In_My_Playlist": 1,
+      "Adjusted_Score": 15.099620206806629,
+      "Adjusted_Rank": 11
+    },
+    {
+      "Rank": 33,
+      "Artist": "Nil\u00fcfer Yanya",
+      "Predicted_Score": 8.81613079505748,
+      "In_My_Playlist": 1,
+      "Adjusted_Score": 14.880849826225875,
+      "Adjusted_Rank": 12
+    },
+    {
+      "Rank": 38,
+      "Artist": "IDLES",
+      "Predicted_Score": 8.564150019255072,
+      "In_My_Playlist": 1,
+      "Adjusted_Score": 14.704463283164188,
+      "Adjusted_Rank": 13
+    },
+    {
+      "Rank": 51,
+      "Artist": "Allie X",
+      "Predicted_Score": 7.611241832329979,
+      "In_My_Playlist": 1,
+      "Adjusted_Score": 14.037427552316624,
+      "Adjusted_Rank": 14
+    },
+    {
+      "Rank": 54,
+      "Artist": "Denzel Curry",
+      "Predicted_Score": 7.194975124859398,
+      "In_My_Playlist": 1,
+      "Adjusted_Score": 13.746040857087216,
+      "Adjusted_Rank": 15
+    },
+    {
+      "Rank": 55,
+      "Artist": "Beach House",
+      "Predicted_Score": 6.970329450327439,
+      "In_My_Playlist": 1,
+      "Adjusted_Score": 13.588788884914845,
+      "Adjusted_Rank": 16
+    },
+    {
+      "Rank": 67,
+      "Artist": "Parcels",
+      "Predicted_Score": 5.946449697889573,
+      "In_My_Playlist": 1,
+      "Adjusted_Score": 12.87207305820834,
+      "Adjusted_Rank": 17
+    },
+    {
+      "Rank": 10,
+      "Artist": "Floating Points",
+      "Predicted_Score": 16.852492972765386,
+      "In_My_Playlist": 0,
+      "Adjusted_Score": 11.79674508093577,
+      "Adjusted_Rank": 18
+    },
+    {
+      "Rank": 11,
+      "Artist": "TV On The Radio",
+      "Predicted_Score": 15.289894424925693,
+      "In_My_Playlist": 0,
+      "Adjusted_Score": 10.702926097447985,
+      "Adjusted_Rank": 19
+    },
+    {
+      "Rank": 12,
+      "Artist": "Sturgill Simpson",
+      "Predicted_Score": 14.619773865465339,
+      "In_My_Playlist": 0,
+      "Adjusted_Score": 10.233841705825737,
+      "Adjusted_Rank": 20
+    },
+    {
+      "Rank": 13,
+      "Artist": "damoridemort",
+      "Predicted_Score": 14.408278260658223,
+      "In_My_Playlist": 0,
+      "Adjusted_Score": 10.085794782460756,
+      "Adjusted_Rank": 21
+    },
+    {
+      "Rank": 14,
+      "Artist": "beabadoobee",
+      "Predicted_Score": 13.663639304514794,
+      "In_My_Playlist": 0,
+      "Adjusted_Score": 9.564547513160354,
+      "Adjusted_Rank": 22
+    },
+    {
+      "Rank": 15,
+      "Artist": "Youth Lagoon",
+      "Predicted_Score": 13.023406524644306,
+      "In_My_Playlist": 0,
+      "Adjusted_Score": 9.116384567251014,
+      "Adjusted_Rank": 23
+    },
+    {
+      "Rank": 16,
+      "Artist": "Fontaines D.C.",
+      "Predicted_Score": 12.707728283144709,
+      "In_My_Playlist": 0,
+      "Adjusted_Score": 8.895409798201296,
+      "Adjusted_Rank": 24
+    },
+    {
+      "Rank": 17,
+      "Artist": "Turnstile",
+      "Predicted_Score": 11.572853548670894,
+      "In_My_Playlist": 0,
+      "Adjusted_Score": 8.100997484069625,
+      "Adjusted_Rank": 25
+    },
+    {
+      "Rank": 18,
+      "Artist": "HAIM",
+      "Predicted_Score": 10.931039868604307,
+      "In_My_Playlist": 0,
+      "Adjusted_Score": 7.651727908023014,
+      "Adjusted_Rank": 26
+    },
+    {
+      "Rank": 19,
+      "Artist": "Nadah El Shazly",
+      "Predicted_Score": 10.343867176412541,
+      "In_My_Playlist": 0,
+      "Adjusted_Score": 7.2407070234887785,
+      "Adjusted_Rank": 27
+    },
+    {
+      "Rank": 20,
+      "Artist": "Tristwch Y Fenywod",
+      "Predicted_Score": 10.30780675694274,
+      "In_My_Playlist": 0,
+      "Adjusted_Score": 7.215464729859918,
+      "Adjusted_Rank": 28
+    },
+    {
+      "Rank": 21,
+      "Artist": "George Thorogood & The Destroyers",
+      "Predicted_Score": 10.180473553163747,
+      "In_My_Playlist": 0,
+      "Adjusted_Score": 7.126331487214622,
+      "Adjusted_Rank": 29
+    },
+    {
+      "Rank": 23,
+      "Artist": "Amelie Lens",
+      "Predicted_Score": 9.892336861236736,
+      "In_My_Playlist": 0,
+      "Adjusted_Score": 6.924635802865715,
+      "Adjusted_Rank": 30
+    },
+    {
+      "Rank": 24,
+      "Artist": "Jawnino",
+      "Predicted_Score": 9.879351749350057,
+      "In_My_Playlist": 0,
+      "Adjusted_Score": 6.915546224545039,
+      "Adjusted_Rank": 31
+    },
+    {
+      "Rank": 25,
+      "Artist": "Spiritualized",
+      "Predicted_Score": 9.733719328748315,
+      "In_My_Playlist": 0,
+      "Adjusted_Score": 6.81360353012382,
+      "Adjusted_Rank": 32
+    },
+    {
+      "Rank": 26,
+      "Artist": "Kim Deal",
+      "Predicted_Score": 9.594258434093227,
+      "In_My_Playlist": 0,
+      "Adjusted_Score": 6.715980903865258,
+      "Adjusted_Rank": 33
+    },
+    {
+      "Rank": 27,
+      "Artist": "Pipiolas",
+      "Predicted_Score": 9.460472026291153,
+      "In_My_Playlist": 0,
+      "Adjusted_Score": 6.622330418403807,
+      "Adjusted_Rank": 34
+    },
+    {
+      "Rank": 28,
+      "Artist": "Real Farmer",
+      "Predicted_Score": 9.354311123706873,
+      "In_My_Playlist": 0,
+      "Adjusted_Score": 6.548017786594811,
+      "Adjusted_Rank": 35
+    },
+    {
+      "Rank": 30,
+      "Artist": "Mohama Saz",
+      "Predicted_Score": 9.12150763889265,
+      "In_My_Playlist": 0,
+      "Adjusted_Score": 6.385055347224855,
+      "Adjusted_Rank": 36
+    },
+    {
+      "Rank": 31,
+      "Artist": "Lambrini Girls",
+      "Predicted_Score": 8.955864554412747,
+      "In_My_Playlist": 0,
+      "Adjusted_Score": 6.269105188088923,
+      "Adjusted_Rank": 37
+    },
+    {
+      "Rank": 32,
+      "Artist": "salem ilese",
+      "Predicted_Score": 8.908337820961153,
+      "In_My_Playlist": 0,
+      "Adjusted_Score": 6.235836474672807,
+      "Adjusted_Rank": 38
+    },
+    {
+      "Rank": 34,
+      "Artist": "MJ Lenderman",
+      "Predicted_Score": 8.813108823476743,
+      "In_My_Playlist": 0,
+      "Adjusted_Score": 6.169176176433719,
+      "Adjusted_Rank": 39
+    },
+    {
+      "Rank": 35,
+      "Artist": "Stereolab",
+      "Predicted_Score": 8.687195629566826,
+      "In_My_Playlist": 0,
+      "Adjusted_Score": 6.081036940696778,
+      "Adjusted_Rank": 40
+    },
+    {
+      "Rank": 36,
+      "Artist": "Wet Leg",
+      "Predicted_Score": 8.592315709084763,
+      "In_My_Playlist": 0,
+      "Adjusted_Score": 6.0146209963593344,
+      "Adjusted_Rank": 41
+    },
+    {
+      "Rank": 37,
+      "Artist": "Magdalena Bay",
+      "Predicted_Score": 8.580698356087135,
+      "In_My_Playlist": 0,
+      "Adjusted_Score": 6.006488849260994,
+      "Adjusted_Rank": 42
+    },
+    {
+      "Rank": 39,
+      "Artist": "Nathan Shepherd",
+      "Predicted_Score": 8.364716859808713,
+      "In_My_Playlist": 0,
+      "Adjusted_Score": 5.855301801866099,
+      "Adjusted_Rank": 43
+    },
+    {
+      "Rank": 40,
+      "Artist": "Brutalismus 3000",
+      "Predicted_Score": 8.36101441084433,
+      "In_My_Playlist": 0,
+      "Adjusted_Score": 5.8527100875910305,
+      "Adjusted_Rank": 44
+    },
+    {
+      "Rank": 41,
+      "Artist": "Amin\u00e9",
+      "Predicted_Score": 8.253734094617933,
+      "In_My_Playlist": 0,
+      "Adjusted_Score": 5.777613866232553,
+      "Adjusted_Rank": 45
+    },
+    {
+      "Rank": 42,
+      "Artist": "feeble little horse",
+      "Predicted_Score": 8.081849527867913,
+      "In_My_Playlist": 0,
+      "Adjusted_Score": 5.657294669507539,
+      "Adjusted_Rank": 46
+    },
+    {
+      "Rank": 43,
+      "Artist": "Warmduscher",
+      "Predicted_Score": 8.01774210603369,
+      "In_My_Playlist": 0,
+      "Adjusted_Score": 5.612419474223583,
+      "Adjusted_Rank": 47
+    },
+    {
+      "Rank": 44,
+      "Artist": "Armand Van Helden",
+      "Predicted_Score": 8.004495787665032,
+      "In_My_Playlist": 0,
+      "Adjusted_Score": 5.603147051365522,
+      "Adjusted_Rank": 48
+    },
+    {
+      "Rank": 45,
+      "Artist": "Horsegirl",
+      "Predicted_Score": 7.915450091199345,
+      "In_My_Playlist": 0,
+      "Adjusted_Score": 5.540815063839541,
+      "Adjusted_Rank": 49
+    },
+    {
+      "Rank": 46,
+      "Artist": "Dehd",
+      "Predicted_Score": 7.883352384149933,
+      "In_My_Playlist": 0,
+      "Adjusted_Score": 5.518346668904953,
+      "Adjusted_Rank": 50
+    },
+    {
+      "Rank": 47,
+      "Artist": "Fcukers",
+      "Predicted_Score": 7.814114467756746,
+      "In_My_Playlist": 0,
+      "Adjusted_Score": 5.469880127429722,
+      "Adjusted_Rank": 51
+    },
+    {
+      "Rank": 48,
+      "Artist": "KNEECAP",
+      "Predicted_Score": 7.7997580349765165,
+      "In_My_Playlist": 0,
+      "Adjusted_Score": 5.459830624483561,
+      "Adjusted_Rank": 52
+    },
+    {
+      "Rank": 49,
+      "Artist": "Kelly Lee Owens",
+      "Predicted_Score": 7.752121109941488,
+      "In_My_Playlist": 0,
+      "Adjusted_Score": 5.426484776959041,
+      "Adjusted_Rank": 53
+    },
+    {
+      "Rank": 50,
+      "Artist": "Christopher Owens",
+      "Predicted_Score": 7.643212273575164,
+      "In_My_Playlist": 0,
+      "Adjusted_Score": 5.350248591502615,
+      "Adjusted_Rank": 54
+    },
+    {
+      "Rank": 52,
+      "Artist": "Sam & Dave",
+      "Predicted_Score": 7.486108376046725,
+      "In_My_Playlist": 0,
+      "Adjusted_Score": 5.240275863232707,
+      "Adjusted_Rank": 55
+    },
+    {
+      "Rank": 53,
+      "Artist": "Machine Girl",
+      "Predicted_Score": 7.353999371723243,
+      "In_My_Playlist": 0,
+      "Adjusted_Score": 5.14779956020627,
+      "Adjusted_Rank": 56
+    },
+    {
+      "Rank": 56,
+      "Artist": "Cat Power",
+      "Predicted_Score": 6.884306511228562,
+      "In_My_Playlist": 0,
+      "Adjusted_Score": 4.819014557859993,
+      "Adjusted_Rank": 57
+    },
+    {
+      "Rank": 57,
+      "Artist": "Young Beefy",
+      "Predicted_Score": 6.737383082048882,
+      "In_My_Playlist": 0,
+      "Adjusted_Score": 4.716168157434217,
+      "Adjusted_Rank": 58
+    },
+    {
+      "Rank": 58,
+      "Artist": "Sailor Honeymoon",
+      "Predicted_Score": 6.723902509374425,
+      "In_My_Playlist": 0,
+      "Adjusted_Score": 4.706731756562097,
+      "Adjusted_Rank": 59
+    },
+    {
+      "Rank": 59,
+      "Artist": "Peter Doherty",
+      "Predicted_Score": 6.517563766841767,
+      "In_My_Playlist": 0,
+      "Adjusted_Score": 4.562294636789237,
+      "Adjusted_Rank": 60
+    },
+    {
+      "Rank": 60,
+      "Artist": "Royish Good Looks",
+      "Predicted_Score": 6.350958154533202,
+      "In_My_Playlist": 0,
+      "Adjusted_Score": 4.445670708173241,
+      "Adjusted_Rank": 61
+    },
+    {
+      "Rank": 61,
+      "Artist": "Jamie xx",
+      "Predicted_Score": 6.29384635147396,
+      "In_My_Playlist": 0,
+      "Adjusted_Score": 4.405692446031772,
+      "Adjusted_Rank": 62
+    },
+    {
+      "Rank": 62,
+      "Artist": "underscores",
+      "Predicted_Score": 6.0533003760142785,
+      "In_My_Playlist": 0,
+      "Adjusted_Score": 4.237310263209995,
+      "Adjusted_Rank": 63
+    },
+    {
+      "Rank": 63,
+      "Artist": "Los Campesinos!",
+      "Predicted_Score": 6.026577804977633,
+      "In_My_Playlist": 0,
+      "Adjusted_Score": 4.2186044634843425,
+      "Adjusted_Rank": 64
+    },
+    {
+      "Rank": 64,
+      "Artist": "Alan Sparhawk",
+      "Predicted_Score": 6.0226626514887815,
+      "In_My_Playlist": 0,
+      "Adjusted_Score": 4.215863856042147,
+      "Adjusted_Rank": 65
+    },
+    {
+      "Rank": 65,
+      "Artist": "Waxahatchee",
+      "Predicted_Score": 5.981222027789021,
+      "In_My_Playlist": 0,
+      "Adjusted_Score": 4.186855419452314,
+      "Adjusted_Rank": 66
+    },
+    {
+      "Rank": 66,
+      "Artist": "Julien Bam",
+      "Predicted_Score": 5.975138485139419,
+      "In_My_Playlist": 0,
+      "Adjusted_Score": 4.182596939597593,
+      "Adjusted_Rank": 67
+    },
+    {
+      "Rank": 68,
+      "Artist": "Amaia Montero",
+      "Predicted_Score": 5.752543823197571,
+      "In_My_Playlist": 0,
+      "Adjusted_Score": 4.0267806762383,
+      "Adjusted_Rank": 68
+    },
+    {
+      "Rank": 69,
+      "Artist": "Christian Lee Hutson",
+      "Predicted_Score": 5.437851942029572,
+      "In_My_Playlist": 0,
+      "Adjusted_Score": 3.8064963594207,
+      "Adjusted_Rank": 69
+    },
+    {
+      "Rank": 70,
+      "Artist": "Seefeel",
+      "Predicted_Score": 5.269773896365018,
+      "In_My_Playlist": 0,
+      "Adjusted_Score": 3.688841727455512,
+      "Adjusted_Rank": 70
+    },
+    {
+      "Rank": 71,
+      "Artist": "Squidji",
+      "Predicted_Score": 4.817207063767399,
+      "In_My_Playlist": 0,
+      "Adjusted_Score": 3.3720449446371794,
+      "Adjusted_Rank": 71
+    },
+    {
+      "Rank": 72,
+      "Artist": "Carolina Durante",
+      "Predicted_Score": 4.77692722661603,
+      "In_My_Playlist": 0,
+      "Adjusted_Score": 3.3438490586312204,
+      "Adjusted_Rank": 72
+    },
+    {
+      "Rank": 73,
+      "Artist": "New Road",
+      "Predicted_Score": 4.4880066316861695,
+      "In_My_Playlist": 0,
+      "Adjusted_Score": 3.1416046421803183,
+      "Adjusted_Rank": 73
+    },
+    {
+      "Rank": 74,
+      "Artist": "Black Country",
+      "Predicted_Score": 4.4880066316861695,
+      "In_My_Playlist": 0,
+      "Adjusted_Score": 3.1416046421803183,
+      "Adjusted_Rank": 74
+    },
+    {
+      "Rank": 75,
+      "Artist": "Soul 'n Jazz Tree",
+      "Predicted_Score": 4.282294441174694,
+      "In_My_Playlist": 0,
+      "Adjusted_Score": 2.997606108822286,
+      "Adjusted_Rank": 75
+    },
+    {
+      "Rank": 76,
+      "Artist": "HUIR",
+      "Predicted_Score": 3.806844910709259,
+      "In_My_Playlist": 0,
+      "Adjusted_Score": 2.664791437496481,
+      "Adjusted_Rank": 76
+    },
+    {
+      "Rank": 77,
+      "Artist": "Michael Bibi",
+      "Predicted_Score": 3.4208941702706754,
+      "In_My_Playlist": 0,
+      "Adjusted_Score": 2.3946259191894725,
+      "Adjusted_Rank": 77
+    },
+    {
+      "Rank": 78,
+      "Artist": "Sabrina Carpenter",
+      "Predicted_Score": 3.198913638021154,
+      "In_My_Playlist": 0,
+      "Adjusted_Score": 2.2392395466148076,
+      "Adjusted_Rank": 78
+    },
+    {
+      "Rank": 79,
+      "Artist": "Jazz and Cappuccino Production",
+      "Predicted_Score": 2.424719582036465,
+      "In_My_Playlist": 0,
+      "Adjusted_Score": 1.6973037074255253,
+      "Adjusted_Rank": 79
+    }
+  ],
+  "timestamp": "2025-05-08T17:04:32.935037"
+}
