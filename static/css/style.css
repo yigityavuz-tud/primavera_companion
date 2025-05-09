@@ -391,12 +391,11 @@ section h2 {
     margin-bottom: 0.5rem;
 }
 
-/* Footer */
 footer {
     background-color: var(--dark-accent);
     color: white;
-    padding: 2rem 0;
-    margin-top: 3rem;
+    padding: 2.5rem 0;
+    margin-top: 4rem;
 }
 
 footer .container {
@@ -407,15 +406,40 @@ footer .container {
 
 footer nav {
     display: flex;
-    gap: 1.5rem;
+    gap: 1.8rem;
 }
 
 footer a {
     color: var(--light-accent);
+    font-weight: 500;
+    transition: var(--hover-transition);
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
 }
 
 footer a:hover {
     color: white;
+    transform: translateY(-2px);
+}
+
+/* Social icons */
+footer a svg {
+    width: 16px;
+    height: 16px;
+}
+
+/* Responsive footer */
+@media (max-width: 768px) {
+    footer .container {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+    }
+    
+    footer nav {
+        justify-content: center;
+    }
 }
 
 /* Responsive Adjustments */
