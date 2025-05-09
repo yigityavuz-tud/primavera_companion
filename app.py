@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for, flash, send_file, session, abort
+from flask import Flask, render_template, request, redirect, url_for, flash, send_file, session
 import os
 import uuid
 import pandas as pd
@@ -7,7 +7,7 @@ import base64
 import threading
 import time
 import shutil
-import gc  # Garbage collector
+import gc
 import logging
 
 from werkzeug.utils import secure_filename
@@ -46,7 +46,6 @@ logging.getLogger().addHandler(defaulthandler)
 logger = logging.getLogger(__name__)
 
 # Background cleanup thread: remove session folders older than 10 minutes
-
 def cleanup_old_folders():
     while True:
         now = time.time()
@@ -128,10 +127,15 @@ def process():
 
     try:
         # 1. Load & explore
-        my_df, primavera_df = load_and_explore_data(
+        result = load_and_explore_data(
             my_playlist_path=my_path,
             primavera_playlist_path=PRIMAVERA_CSV
         )
+        if isinstance(result, dict):
+            my_df = result.get('my_df') or result.get('user_df')
+            primavera_df = result.get('primavera_df') or result.get('festival_df')
+        else:
+            my_df, primavera_df = result
 
         # 2. Analyze genres
         shared_genres = analyze_genres(my_df, primavera_df)
@@ -158,7 +162,6 @@ def process():
         # 5. Visualization: save chart to disk
         chart_b64 = get_graph_as_base64(ranked, top_n=30)
         chart_path = os.path.join(result_folder, 'chart.png')
-        # strip any data URI prefix
         b64_content = chart_b64.split(',')[-1]
         with open(chart_path, 'wb') as cf:
             cf.write(base64.b64decode(b64_content))
@@ -176,6 +179,7 @@ def process():
 
         return redirect(url_for('results'))
     except Exception as e:
+        logger.error(f"Processing error: {e}", exc_info=True)
         flash(f'Error processing your playlist: {e}', 'error')
         return redirect(url_for('index'))
 
@@ -218,7 +222,6 @@ def download():
         return redirect(url_for('index'))
     return send_file(html_file, as_attachment=True)
 
-# Retain existing 502 handler and main entrypoint
 @app.errorhandler(502)
 def bad_gateway_error(e):
     return """
