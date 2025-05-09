@@ -154,9 +154,10 @@ def process():
         del primavera_df
         gc.collect()
 
-        # 4. Train & rank
+        # 4. Train & rank - FIX: Corrected parameter order
         model_results = train_and_evaluate_models(train_data)
-        ranked = predict_and_rank_artists(model_results, test_data)
+        # Fix the order here - pass test_data first, model_results second
+        ranked = predict_and_rank_artists(test_data, model_results)
         ranked = analyze_artist_overlap(ranked, train_data, test_data)
 
         # 5. Visualization: save chart to disk
@@ -221,6 +222,10 @@ def download():
         flash('Download not available. Please try again.', 'error')
         return redirect(url_for('index'))
     return send_file(html_file, as_attachment=True)
+
+@app.route('/about')
+def about():
+    return render_template('about.html')
 
 @app.errorhandler(502)
 def bad_gateway_error(e):

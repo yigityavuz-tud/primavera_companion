@@ -58,13 +58,28 @@ def predict_and_rank_artists(test_data, model_results):
     # Reorder columns
     ranked_artists = ranked_artists[['Rank', 'Artist', 'Predicted_Score']]
     
-    return ranked_artists, test_data_copy
+    return ranked_artists
 
 
-def analyze_artist_overlap(ranked_artists, my_playlist_df, primavera_playlist_df):
-    """Analyze overlap between personal playlist and Primavera artists"""
-    # Extract all artists from personal playlist
-    my_artists = set(my_playlist_df['Artist Name(s)'].str.split(', ').explode().unique())
+def analyze_artist_overlap(ranked_artists, train_data, test_data=None):
+    """
+    Analyze overlap between personal playlist and Primavera artists
+    
+    This function handles both:
+    1. When called with train_data and test_data DataFrames (from app.py)
+    2. When called with DataFrames directly (from main.py)
+    """
+    # Extract all artists from personal playlist (handle different possible formats)
+    if 'Artist' in train_data.columns:
+        # If train_data is already preprocessed
+        my_artists = set(train_data['Artist'].unique())
+    elif 'Artist Name(s)' in train_data.columns:
+        # If train_data is the raw DataFrame
+        my_artists = set(train_data['Artist Name(s)'].str.split(', ').explode().unique())
+    else:
+        # Fallback
+        my_artists = set()
+        print("Warning: Could not extract artists from train_data")
     
     # Check which Primavera artists are in my playlist
     ranked_artists['In_My_Playlist'] = ranked_artists['Artist'].apply(
